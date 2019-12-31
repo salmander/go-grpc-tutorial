@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package userservice;
+
+service UserService {
+  rpc GetCustomerById (CustomerByIdRequest) returns (Customer) {}
+  rpc GetCustomerByUuid (CustomerByUuidRequest) returns (Customer) {}
+  rpc GetCustomerByEmail (CustomerByEmailRequest) returns (Customer) {}
+  rpc GetCustomerByNectar (CustomerByNectarRequest) returns (Customer) {}
+}
+
+message CustomerByIdRequest {
+  int32 id = 1;
+}
+
+message CustomerByUuidRequest {
+  string uuid = 1;
+}
+
+message CustomerByEmailRequest {
+  string email = 1;
+}
+
+message CustomerByNectarRequest {
+  string nectar_card = 1;
+}
+
+message Customer {
+  int32 id = 1;
+  string uuid = 2;
+  string first_name = 3;
+  string last_name = 4;
+  string email = 5;
+  string nectar_card = 6;
+}
