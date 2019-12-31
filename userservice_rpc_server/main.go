@@ -21,10 +21,10 @@ type server struct {
 
 func (s *server) GetCustomerById(ctx context.Context, req *pb.CustomerByIdRequest) (*pb.Customer, error) {
 	switch req.GetId() {
-	case 1:
+	case 9:
 		return &pb.Customer{
 			Id:                   9,
-			Uuid:                 "009",
+			Uuid:                 "batman-911",
 			FirstName:            "Bruce",
 			LastName:             "Wayne",
 			Email:                "imbatman@justiceleague.com",
