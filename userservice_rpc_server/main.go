@@ -20,14 +20,19 @@ type server struct {
 }
 
 func (s *server) GetCustomerById(ctx context.Context, req *pb.CustomerByIdRequest) (*pb.Customer, error) {
-	return &pb.Customer{
-		Id:                   1,
-		Uuid:                 "009",
-		FirstName:            "Bruce",
-		LastName:             "Wayne",
-		Email:                "imbatman@justiceleague.com",
-		NectarCard:           "911",
-	}, nil
+	switch req.GetId() {
+	case 1:
+		return &pb.Customer{
+			Id:                   9,
+			Uuid:                 "009",
+			FirstName:            "Bruce",
+			LastName:             "Wayne",
+			Email:                "imbatman@justiceleague.com",
+			NectarCard:           "911",
+		}, nil
+	default:
+		return &pb.Customer{}, status.Errorf(codes.NotFound, "unknown customer id")
+	}
 }
 
 func (s *server) GetCustomerByUuid(ctx context.Context, req *pb.CustomerByUuidRequest) (*pb.Customer, error) {
