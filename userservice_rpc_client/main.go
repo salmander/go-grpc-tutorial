@@ -30,10 +30,10 @@ func main() {
 	// go run userservice/main.go email=imbatman@justiceleague.com
 	// go run userservice/main.go nectar=911
 
-	idPtr := flag.Int("id", 1, "SmartShop identity id")
+	idPtr := flag.Int("id", 0, "SmartShop identity id")
 	//uuidPtr := flag.String("uuid", "batman-911", "Sainsbury's identity UUID")
 	flag.Parse()
-	if idPtr != nil {
+	if idPtr != nil && *idPtr > 0 {
 		log.Printf("Getting customer by SmartShop ID: %v", *idPtr)
 		user, err := c.GetCustomerById(ctx, &pb.CustomerByIdRequest{Id: int32(*idPtr)})
 		if err != nil {
