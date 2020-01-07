@@ -7,6 +7,7 @@ import (
 	"log"
 	"net"
 
+	"github.com/golang/protobuf/ptypes/empty"
 	pb "github.com/salmander/go-grpc-tutorial/userservice"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
@@ -17,6 +18,14 @@ const port = ":50052"
 
 type server struct {
 	pb.UnimplementedUserServiceServer
+}
+
+func (s *server) Healthcheck(ctx context.Context, req *empty.Empty) (*pb.Health, error) {
+	return &pb.Health{
+		Message:              "all good",
+		Errors:               "none",
+
+	}, nil
 }
 
 func (s *server) GetUserById(ctx context.Context, req *pb.UserByIdRequest) (*pb.User, error) {

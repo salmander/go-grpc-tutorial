@@ -6,6 +6,7 @@ import (
 	"log"
 	"time"
 
+	"github.com/golang/protobuf/ptypes/empty"
 	pb "github.com/salmander/go-grpc-tutorial/userservice"
 	"google.golang.org/grpc"
 )
@@ -41,5 +42,13 @@ func main() {
 			return
 		}
 		log.Printf("User found by SmartShop ID: %v, %v", *idPtr, *user)
+	} else {
+		// TODO Do the healthcheck thing
+		health, err := c.Healthcheck(ctx, &empty.Empty{})
+		if err != nil {
+			log.Printf("error returned from Healthcheck: %v", err)
+			return
+		}
+		log.Printf("Health: %+v", health.String())
 	}
 }
