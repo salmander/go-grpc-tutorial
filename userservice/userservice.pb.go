@@ -24,163 +24,163 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
-type CustomerByIdRequest struct {
+type UserByIdRequest struct {
 	Id                   int32    `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
-func (m *CustomerByIdRequest) Reset()         { *m = CustomerByIdRequest{} }
-func (m *CustomerByIdRequest) String() string { return proto.CompactTextString(m) }
-func (*CustomerByIdRequest) ProtoMessage()    {}
-func (*CustomerByIdRequest) Descriptor() ([]byte, []int) {
+func (m *UserByIdRequest) Reset()         { *m = UserByIdRequest{} }
+func (m *UserByIdRequest) String() string { return proto.CompactTextString(m) }
+func (*UserByIdRequest) ProtoMessage()    {}
+func (*UserByIdRequest) Descriptor() ([]byte, []int) {
 	return fileDescriptor_68a7ca558839fd2b, []int{0}
 }
 
-func (m *CustomerByIdRequest) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_CustomerByIdRequest.Unmarshal(m, b)
+func (m *UserByIdRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_UserByIdRequest.Unmarshal(m, b)
 }
-func (m *CustomerByIdRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_CustomerByIdRequest.Marshal(b, m, deterministic)
+func (m *UserByIdRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_UserByIdRequest.Marshal(b, m, deterministic)
 }
-func (m *CustomerByIdRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_CustomerByIdRequest.Merge(m, src)
+func (m *UserByIdRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_UserByIdRequest.Merge(m, src)
 }
-func (m *CustomerByIdRequest) XXX_Size() int {
-	return xxx_messageInfo_CustomerByIdRequest.Size(m)
+func (m *UserByIdRequest) XXX_Size() int {
+	return xxx_messageInfo_UserByIdRequest.Size(m)
 }
-func (m *CustomerByIdRequest) XXX_DiscardUnknown() {
-	xxx_messageInfo_CustomerByIdRequest.DiscardUnknown(m)
+func (m *UserByIdRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_UserByIdRequest.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_CustomerByIdRequest proto.InternalMessageInfo
+var xxx_messageInfo_UserByIdRequest proto.InternalMessageInfo
 
-func (m *CustomerByIdRequest) GetId() int32 {
+func (m *UserByIdRequest) GetId() int32 {
 	if m != nil {
 		return m.Id
 	}
 	return 0
 }
 
-type CustomerByUuidRequest struct {
+type UserByUuidRequest struct {
 	Uuid                 string   `protobuf:"bytes,1,opt,name=uuid,proto3" json:"uuid,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
-func (m *CustomerByUuidRequest) Reset()         { *m = CustomerByUuidRequest{} }
-func (m *CustomerByUuidRequest) String() string { return proto.CompactTextString(m) }
-func (*CustomerByUuidRequest) ProtoMessage()    {}
-func (*CustomerByUuidRequest) Descriptor() ([]byte, []int) {
+func (m *UserByUuidRequest) Reset()         { *m = UserByUuidRequest{} }
+func (m *UserByUuidRequest) String() string { return proto.CompactTextString(m) }
+func (*UserByUuidRequest) ProtoMessage()    {}
+func (*UserByUuidRequest) Descriptor() ([]byte, []int) {
 	return fileDescriptor_68a7ca558839fd2b, []int{1}
 }
 
-func (m *CustomerByUuidRequest) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_CustomerByUuidRequest.Unmarshal(m, b)
+func (m *UserByUuidRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_UserByUuidRequest.Unmarshal(m, b)
 }
-func (m *CustomerByUuidRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_CustomerByUuidRequest.Marshal(b, m, deterministic)
+func (m *UserByUuidRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_UserByUuidRequest.Marshal(b, m, deterministic)
 }
-func (m *CustomerByUuidRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_CustomerByUuidRequest.Merge(m, src)
+func (m *UserByUuidRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_UserByUuidRequest.Merge(m, src)
 }
-func (m *CustomerByUuidRequest) XXX_Size() int {
-	return xxx_messageInfo_CustomerByUuidRequest.Size(m)
+func (m *UserByUuidRequest) XXX_Size() int {
+	return xxx_messageInfo_UserByUuidRequest.Size(m)
 }
-func (m *CustomerByUuidRequest) XXX_DiscardUnknown() {
-	xxx_messageInfo_CustomerByUuidRequest.DiscardUnknown(m)
+func (m *UserByUuidRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_UserByUuidRequest.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_CustomerByUuidRequest proto.InternalMessageInfo
+var xxx_messageInfo_UserByUuidRequest proto.InternalMessageInfo
 
-func (m *CustomerByUuidRequest) GetUuid() string {
+func (m *UserByUuidRequest) GetUuid() string {
 	if m != nil {
 		return m.Uuid
 	}
 	return ""
 }
 
-type CustomerByEmailRequest struct {
+type UserByEmailRequest struct {
 	Email                string   `protobuf:"bytes,1,opt,name=email,proto3" json:"email,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
-func (m *CustomerByEmailRequest) Reset()         { *m = CustomerByEmailRequest{} }
-func (m *CustomerByEmailRequest) String() string { return proto.CompactTextString(m) }
-func (*CustomerByEmailRequest) ProtoMessage()    {}
-func (*CustomerByEmailRequest) Descriptor() ([]byte, []int) {
+func (m *UserByEmailRequest) Reset()         { *m = UserByEmailRequest{} }
+func (m *UserByEmailRequest) String() string { return proto.CompactTextString(m) }
+func (*UserByEmailRequest) ProtoMessage()    {}
+func (*UserByEmailRequest) Descriptor() ([]byte, []int) {
 	return fileDescriptor_68a7ca558839fd2b, []int{2}
 }
 
-func (m *CustomerByEmailRequest) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_CustomerByEmailRequest.Unmarshal(m, b)
+func (m *UserByEmailRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_UserByEmailRequest.Unmarshal(m, b)
 }
-func (m *CustomerByEmailRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_CustomerByEmailRequest.Marshal(b, m, deterministic)
+func (m *UserByEmailRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_UserByEmailRequest.Marshal(b, m, deterministic)
 }
-func (m *CustomerByEmailRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_CustomerByEmailRequest.Merge(m, src)
+func (m *UserByEmailRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_UserByEmailRequest.Merge(m, src)
 }
-func (m *CustomerByEmailRequest) XXX_Size() int {
-	return xxx_messageInfo_CustomerByEmailRequest.Size(m)
+func (m *UserByEmailRequest) XXX_Size() int {
+	return xxx_messageInfo_UserByEmailRequest.Size(m)
 }
-func (m *CustomerByEmailRequest) XXX_DiscardUnknown() {
-	xxx_messageInfo_CustomerByEmailRequest.DiscardUnknown(m)
+func (m *UserByEmailRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_UserByEmailRequest.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_CustomerByEmailRequest proto.InternalMessageInfo
+var xxx_messageInfo_UserByEmailRequest proto.InternalMessageInfo
 
-func (m *CustomerByEmailRequest) GetEmail() string {
+func (m *UserByEmailRequest) GetEmail() string {
 	if m != nil {
 		return m.Email
 	}
 	return ""
 }
 
-type CustomerByNectarRequest struct {
+type UserByNectarRequest struct {
 	NectarCard           string   `protobuf:"bytes,1,opt,name=nectar_card,json=nectarCard,proto3" json:"nectar_card,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
-func (m *CustomerByNectarRequest) Reset()         { *m = CustomerByNectarRequest{} }
-func (m *CustomerByNectarRequest) String() string { return proto.CompactTextString(m) }
-func (*CustomerByNectarRequest) ProtoMessage()    {}
-func (*CustomerByNectarRequest) Descriptor() ([]byte, []int) {
+func (m *UserByNectarRequest) Reset()         { *m = UserByNectarRequest{} }
+func (m *UserByNectarRequest) String() string { return proto.CompactTextString(m) }
+func (*UserByNectarRequest) ProtoMessage()    {}
+func (*UserByNectarRequest) Descriptor() ([]byte, []int) {
 	return fileDescriptor_68a7ca558839fd2b, []int{3}
 }
 
-func (m *CustomerByNectarRequest) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_CustomerByNectarRequest.Unmarshal(m, b)
+func (m *UserByNectarRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_UserByNectarRequest.Unmarshal(m, b)
 }
-func (m *CustomerByNectarRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_CustomerByNectarRequest.Marshal(b, m, deterministic)
+func (m *UserByNectarRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_UserByNectarRequest.Marshal(b, m, deterministic)
 }
-func (m *CustomerByNectarRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_CustomerByNectarRequest.Merge(m, src)
+func (m *UserByNectarRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_UserByNectarRequest.Merge(m, src)
 }
-func (m *CustomerByNectarRequest) XXX_Size() int {
-	return xxx_messageInfo_CustomerByNectarRequest.Size(m)
+func (m *UserByNectarRequest) XXX_Size() int {
+	return xxx_messageInfo_UserByNectarRequest.Size(m)
 }
-func (m *CustomerByNectarRequest) XXX_DiscardUnknown() {
-	xxx_messageInfo_CustomerByNectarRequest.DiscardUnknown(m)
+func (m *UserByNectarRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_UserByNectarRequest.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_CustomerByNectarRequest proto.InternalMessageInfo
+var xxx_messageInfo_UserByNectarRequest proto.InternalMessageInfo
 
-func (m *CustomerByNectarRequest) GetNectarCard() string {
+func (m *UserByNectarRequest) GetNectarCard() string {
 	if m != nil {
 		return m.NectarCard
 	}
 	return ""
 }
 
-type Customer struct {
+type User struct {
 	Id                   int32    `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
 	Uuid                 string   `protobuf:"bytes,2,opt,name=uuid,proto3" json:"uuid,omitempty"`
 	FirstName            string   `protobuf:"bytes,3,opt,name=first_name,json=firstName,proto3" json:"first_name,omitempty"`
@@ -192,67 +192,67 @@ type Customer struct {
 	XXX_sizecache        int32    `json:"-"`
 }
 
-func (m *Customer) Reset()         { *m = Customer{} }
-func (m *Customer) String() string { return proto.CompactTextString(m) }
-func (*Customer) ProtoMessage()    {}
-func (*Customer) Descriptor() ([]byte, []int) {
+func (m *User) Reset()         { *m = User{} }
+func (m *User) String() string { return proto.CompactTextString(m) }
+func (*User) ProtoMessage()    {}
+func (*User) Descriptor() ([]byte, []int) {
 	return fileDescriptor_68a7ca558839fd2b, []int{4}
 }
 
-func (m *Customer) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_Customer.Unmarshal(m, b)
+func (m *User) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_User.Unmarshal(m, b)
 }
-func (m *Customer) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_Customer.Marshal(b, m, deterministic)
+func (m *User) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_User.Marshal(b, m, deterministic)
 }
-func (m *Customer) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_Customer.Merge(m, src)
+func (m *User) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_User.Merge(m, src)
 }
-func (m *Customer) XXX_Size() int {
-	return xxx_messageInfo_Customer.Size(m)
+func (m *User) XXX_Size() int {
+	return xxx_messageInfo_User.Size(m)
 }
-func (m *Customer) XXX_DiscardUnknown() {
-	xxx_messageInfo_Customer.DiscardUnknown(m)
+func (m *User) XXX_DiscardUnknown() {
+	xxx_messageInfo_User.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_Customer proto.InternalMessageInfo
+var xxx_messageInfo_User proto.InternalMessageInfo
 
-func (m *Customer) GetId() int32 {
+func (m *User) GetId() int32 {
 	if m != nil {
 		return m.Id
 	}
 	return 0
 }
 
-func (m *Customer) GetUuid() string {
+func (m *User) GetUuid() string {
 	if m != nil {
 		return m.Uuid
 	}
 	return ""
 }
 
-func (m *Customer) GetFirstName() string {
+func (m *User) GetFirstName() string {
 	if m != nil {
 		return m.FirstName
 	}
 	return ""
 }
 
-func (m *Customer) GetLastName() string {
+func (m *User) GetLastName() string {
 	if m != nil {
 		return m.LastName
 	}
 	return ""
 }
 
-func (m *Customer) GetEmail() string {
+func (m *User) GetEmail() string {
 	if m != nil {
 		return m.Email
 	}
 	return ""
 }
 
-func (m *Customer) GetNectarCard() string {
+func (m *User) GetNectarCard() string {
 	if m != nil {
 		return m.NectarCard
 	}
@@ -260,37 +260,37 @@ func (m *Customer) GetNectarCard() string {
 }
 
 func init() {
-	proto.RegisterType((*CustomerByIdRequest)(nil), "userservice.CustomerByIdRequest")
-	proto.RegisterType((*CustomerByUuidRequest)(nil), "userservice.CustomerByUuidRequest")
-	proto.RegisterType((*CustomerByEmailRequest)(nil), "userservice.CustomerByEmailRequest")
-	proto.RegisterType((*CustomerByNectarRequest)(nil), "userservice.CustomerByNectarRequest")
-	proto.RegisterType((*Customer)(nil), "userservice.Customer")
+	proto.RegisterType((*UserByIdRequest)(nil), "userservice.UserByIdRequest")
+	proto.RegisterType((*UserByUuidRequest)(nil), "userservice.UserByUuidRequest")
+	proto.RegisterType((*UserByEmailRequest)(nil), "userservice.UserByEmailRequest")
+	proto.RegisterType((*UserByNectarRequest)(nil), "userservice.UserByNectarRequest")
+	proto.RegisterType((*User)(nil), "userservice.User")
 }
 
 func init() { proto.RegisterFile("userservice.proto", fileDescriptor_68a7ca558839fd2b) }
 
 var fileDescriptor_68a7ca558839fd2b = []byte{
-	// 314 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x74, 0x92, 0x5f, 0x4b, 0xc3, 0x30,
-	0x14, 0xc5, 0x5d, 0xdd, 0xc6, 0x76, 0x07, 0xca, 0xee, 0x9c, 0x0e, 0x45, 0x1c, 0x51, 0x41, 0x10,
-	0xf6, 0xa0, 0x6f, 0x3e, 0x3a, 0x44, 0x04, 0x19, 0x52, 0xdd, 0xf3, 0x88, 0xeb, 0x15, 0x02, 0xeb,
-	0xaa, 0xf9, 0x23, 0xf8, 0x71, 0xfc, 0x54, 0x7e, 0x1d, 0x69, 0xba, 0xb6, 0x69, 0x59, 0xde, 0x9a,
-	0x73, 0x4f, 0x7e, 0x3d, 0xe4, 0x5c, 0xe8, 0x1b, 0x45, 0x52, 0x91, 0xfc, 0x16, 0x4b, 0x9a, 0x7c,
-	0xca, 0x44, 0x27, 0xd8, 0x73, 0x24, 0x76, 0x09, 0x83, 0xa9, 0x51, 0x3a, 0x89, 0x49, 0xde, 0xff,
-	0x3c, 0x45, 0x21, 0x7d, 0x19, 0x52, 0x1a, 0xf7, 0x20, 0x10, 0xd1, 0xa8, 0x31, 0x6e, 0x5c, 0xb5,
-	0xc2, 0x40, 0x44, 0xec, 0x1a, 0x86, 0xa5, 0x6d, 0x6e, 0x44, 0x61, 0x44, 0x68, 0x1a, 0xb3, 0xb1,
-	0x76, 0x43, 0xfb, 0xcd, 0x26, 0x70, 0x58, 0x9a, 0x1f, 0x62, 0x2e, 0x56, 0xb9, 0xfb, 0x00, 0x5a,
-	0x94, 0x9e, 0x37, 0xf6, 0xec, 0xc0, 0xee, 0xe0, 0xa8, 0xf4, 0xcf, 0x68, 0xa9, 0xb9, 0xcc, 0x2f,
-	0x9c, 0x41, 0x6f, 0x6d, 0x85, 0xc5, 0x92, 0xcb, 0xfc, 0x2f, 0x90, 0x49, 0x53, 0x2e, 0x23, 0xf6,
-	0xdb, 0x80, 0x4e, 0x7e, 0xb9, 0x9e, 0xba, 0x08, 0x17, 0x94, 0xe1, 0xf0, 0x14, 0xe0, 0x43, 0x48,
-	0xa5, 0x17, 0x6b, 0x1e, 0xd3, 0x68, 0xd7, 0x4e, 0xba, 0x56, 0x99, 0xf1, 0x98, 0xf0, 0x04, 0xba,
-	0x2b, 0x9e, 0x4f, 0x9b, 0x76, 0xda, 0x49, 0x05, 0x3b, 0x2c, 0xe2, 0xb7, 0x9c, 0xf8, 0xf5, 0x8c,
-	0xed, 0x7a, 0xc6, 0x9b, 0xbf, 0x00, 0x7a, 0x73, 0x45, 0xf2, 0x35, 0x7b, 0x73, 0x7c, 0x86, 0xfd,
-	0x47, 0xd2, 0xee, 0xb3, 0xe3, 0x78, 0xe2, 0xf6, 0xb4, 0xa5, 0x91, 0xe3, 0xe1, 0x56, 0x07, 0xdb,
-	0xc1, 0x17, 0xe8, 0x57, 0x68, 0x69, 0x3b, 0xc8, 0x3c, 0x3c, 0xa7, 0x3a, 0x3f, 0x31, 0x04, 0xac,
-	0x10, 0x6d, 0x85, 0x78, 0xee, 0x41, 0xba, 0x05, 0xfb, 0x99, 0x6f, 0x30, 0xa8, 0x30, 0xb3, 0x9a,
-	0xf1, 0xc2, 0x03, 0xad, 0x6c, 0x81, 0x97, 0xfa, 0xde, 0xb6, 0x1b, 0x7d, 0xfb, 0x1f, 0x00, 0x00,
-	0xff, 0xff, 0xea, 0xee, 0x7f, 0x5d, 0xe6, 0x02, 0x00, 0x00,
+	// 306 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x6c, 0x92, 0x4f, 0x4f, 0x83, 0x40,
+	0x14, 0xc4, 0x05, 0xa1, 0x91, 0x47, 0x6c, 0xc3, 0xd3, 0x43, 0xe3, 0xdf, 0xba, 0x17, 0x8d, 0x87,
+	0x1e, 0x34, 0xf1, 0x6c, 0xd4, 0xfa, 0xe7, 0xd2, 0x03, 0xa6, 0xe7, 0x66, 0x85, 0x67, 0xb2, 0x49,
+	0x69, 0x75, 0x01, 0x13, 0x3f, 0x8c, 0x67, 0xbf, 0xa6, 0x61, 0xb7, 0xac, 0x2b, 0xee, 0x8d, 0x9d,
+	0x19, 0x7e, 0x19, 0x76, 0x80, 0xa4, 0x2e, 0x49, 0x96, 0x24, 0x3f, 0x44, 0x46, 0xe3, 0x37, 0xb9,
+	0xaa, 0x56, 0x18, 0x5b, 0x12, 0x3b, 0x81, 0xc1, 0xac, 0x24, 0x79, 0xf3, 0xf9, 0x94, 0xa7, 0xf4,
+	0x5e, 0x53, 0x59, 0x61, 0x1f, 0x7c, 0x91, 0x0f, 0xbd, 0x91, 0x77, 0x16, 0xa6, 0xbe, 0xc8, 0xd9,
+	0x29, 0x24, 0x3a, 0x32, 0xab, 0x85, 0x09, 0x21, 0x04, 0x75, 0xbd, 0x8e, 0x45, 0xa9, 0x7a, 0x66,
+	0xe7, 0x80, 0x3a, 0x38, 0x29, 0xb8, 0x58, 0xb4, 0xc9, 0x5d, 0x08, 0xa9, 0x39, 0xaf, 0xa3, 0xfa,
+	0xc0, 0xae, 0x60, 0x47, 0x67, 0xa7, 0x94, 0x55, 0x5c, 0xb6, 0xe1, 0x63, 0x88, 0x97, 0x4a, 0x98,
+	0x67, 0x5c, 0xb6, 0x74, 0xd0, 0xd2, 0x2d, 0x97, 0x39, 0xfb, 0xf2, 0x20, 0x68, 0x5e, 0xec, 0xb6,
+	0x34, 0x85, 0xfc, 0xdf, 0x42, 0x78, 0x08, 0xf0, 0x2a, 0x64, 0x59, 0xcd, 0x97, 0xbc, 0xa0, 0xe1,
+	0xa6, 0x72, 0x22, 0xa5, 0x4c, 0x79, 0x41, 0xb8, 0x0f, 0xd1, 0x82, 0xb7, 0x6e, 0xa0, 0xdc, 0xad,
+	0x46, 0x50, 0xa6, 0xa9, 0x1d, 0x5a, 0xb5, 0xbb, 0xfd, 0x7a, 0xdd, 0x7e, 0x17, 0xdf, 0x3e, 0xc4,
+	0x4d, 0xbf, 0x67, 0x7d, 0xbf, 0x78, 0x0d, 0xf1, 0x03, 0x55, 0xed, 0x15, 0xe3, 0xc1, 0xd8, 0xde,
+	0xa3, 0x73, 0xf3, 0x7b, 0xc9, 0x3f, 0x97, 0x6d, 0xe0, 0x1d, 0x6c, 0x1b, 0x42, 0xb3, 0x00, 0x1e,
+	0x39, 0x18, 0xd6, 0x34, 0x6e, 0xca, 0x3d, 0xf4, 0x0d, 0x65, 0xa2, 0x3f, 0xc5, 0x81, 0xb1, 0x87,
+	0x73, 0x73, 0x1e, 0x61, 0x60, 0x38, 0x7a, 0x3a, 0x1c, 0x39, 0x40, 0x7f, 0x56, 0x75, 0x92, 0x5e,
+	0x7a, 0xea, 0x6f, 0xbc, 0xfc, 0x09, 0x00, 0x00, 0xff, 0xff, 0x42, 0x01, 0xef, 0xdf, 0xa2, 0x02,
+	0x00, 0x00,
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -305,10 +305,10 @@ const _ = grpc.SupportPackageIsVersion4
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
 type UserServiceClient interface {
-	GetCustomerById(ctx context.Context, in *CustomerByIdRequest, opts ...grpc.CallOption) (*Customer, error)
-	GetCustomerByUuid(ctx context.Context, in *CustomerByUuidRequest, opts ...grpc.CallOption) (*Customer, error)
-	GetCustomerByEmail(ctx context.Context, in *CustomerByEmailRequest, opts ...grpc.CallOption) (*Customer, error)
-	GetCustomerByNectar(ctx context.Context, in *CustomerByNectarRequest, opts ...grpc.CallOption) (*Customer, error)
+	GetUserById(ctx context.Context, in *UserByIdRequest, opts ...grpc.CallOption) (*User, error)
+	GetUserByUuid(ctx context.Context, in *UserByUuidRequest, opts ...grpc.CallOption) (*User, error)
+	GetUserByEmail(ctx context.Context, in *UserByEmailRequest, opts ...grpc.CallOption) (*User, error)
+	GetUserByNectar(ctx context.Context, in *UserByNectarRequest, opts ...grpc.CallOption) (*User, error)
 }
 
 type userServiceClient struct {
@@ -319,36 +319,36 @@ func NewUserServiceClient(cc *grpc.ClientConn) UserServiceClient {
 	return &userServiceClient{cc}
 }
 
-func (c *userServiceClient) GetCustomerById(ctx context.Context, in *CustomerByIdRequest, opts ...grpc.CallOption) (*Customer, error) {
-	out := new(Customer)
-	err := c.cc.Invoke(ctx, "/userservice.UserService/GetCustomerById", in, out, opts...)
+func (c *userServiceClient) GetUserById(ctx context.Context, in *UserByIdRequest, opts ...grpc.CallOption) (*User, error) {
+	out := new(User)
+	err := c.cc.Invoke(ctx, "/userservice.UserService/GetUserById", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *userServiceClient) GetCustomerByUuid(ctx context.Context, in *CustomerByUuidRequest, opts ...grpc.CallOption) (*Customer, error) {
-	out := new(Customer)
-	err := c.cc.Invoke(ctx, "/userservice.UserService/GetCustomerByUuid", in, out, opts...)
+func (c *userServiceClient) GetUserByUuid(ctx context.Context, in *UserByUuidRequest, opts ...grpc.CallOption) (*User, error) {
+	out := new(User)
+	err := c.cc.Invoke(ctx, "/userservice.UserService/GetUserByUuid", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *userServiceClient) GetCustomerByEmail(ctx context.Context, in *CustomerByEmailRequest, opts ...grpc.CallOption) (*Customer, error) {
-	out := new(Customer)
-	err := c.cc.Invoke(ctx, "/userservice.UserService/GetCustomerByEmail", in, out, opts...)
+func (c *userServiceClient) GetUserByEmail(ctx context.Context, in *UserByEmailRequest, opts ...grpc.CallOption) (*User, error) {
+	out := new(User)
+	err := c.cc.Invoke(ctx, "/userservice.UserService/GetUserByEmail", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *userServiceClient) GetCustomerByNectar(ctx context.Context, in *CustomerByNectarRequest, opts ...grpc.CallOption) (*Customer, error) {
-	out := new(Customer)
-	err := c.cc.Invoke(ctx, "/userservice.UserService/GetCustomerByNectar", in, out, opts...)
+func (c *userServiceClient) GetUserByNectar(ctx context.Context, in *UserByNectarRequest, opts ...grpc.CallOption) (*User, error) {
+	out := new(User)
+	err := c.cc.Invoke(ctx, "/userservice.UserService/GetUserByNectar", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -357,101 +357,101 @@ func (c *userServiceClient) GetCustomerByNectar(ctx context.Context, in *Custome
 
 // UserServiceServer is the server API for UserService service.
 type UserServiceServer interface {
-	GetCustomerById(context.Context, *CustomerByIdRequest) (*Customer, error)
-	GetCustomerByUuid(context.Context, *CustomerByUuidRequest) (*Customer, error)
-	GetCustomerByEmail(context.Context, *CustomerByEmailRequest) (*Customer, error)
-	GetCustomerByNectar(context.Context, *CustomerByNectarRequest) (*Customer, error)
+	GetUserById(context.Context, *UserByIdRequest) (*User, error)
+	GetUserByUuid(context.Context, *UserByUuidRequest) (*User, error)
+	GetUserByEmail(context.Context, *UserByEmailRequest) (*User, error)
+	GetUserByNectar(context.Context, *UserByNectarRequest) (*User, error)
 }
 
 // UnimplementedUserServiceServer can be embedded to have forward compatible implementations.
 type UnimplementedUserServiceServer struct {
 }
 
-func (*UnimplementedUserServiceServer) GetCustomerById(ctx context.Context, req *CustomerByIdRequest) (*Customer, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetCustomerById not implemented")
+func (*UnimplementedUserServiceServer) GetUserById(ctx context.Context, req *UserByIdRequest) (*User, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetUserById not implemented")
 }
-func (*UnimplementedUserServiceServer) GetCustomerByUuid(ctx context.Context, req *CustomerByUuidRequest) (*Customer, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetCustomerByUuid not implemented")
+func (*UnimplementedUserServiceServer) GetUserByUuid(ctx context.Context, req *UserByUuidRequest) (*User, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetUserByUuid not implemented")
 }
-func (*UnimplementedUserServiceServer) GetCustomerByEmail(ctx context.Context, req *CustomerByEmailRequest) (*Customer, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetCustomerByEmail not implemented")
+func (*UnimplementedUserServiceServer) GetUserByEmail(ctx context.Context, req *UserByEmailRequest) (*User, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetUserByEmail not implemented")
 }
-func (*UnimplementedUserServiceServer) GetCustomerByNectar(ctx context.Context, req *CustomerByNectarRequest) (*Customer, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetCustomerByNectar not implemented")
+func (*UnimplementedUserServiceServer) GetUserByNectar(ctx context.Context, req *UserByNectarRequest) (*User, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetUserByNectar not implemented")
 }
 
 func RegisterUserServiceServer(s *grpc.Server, srv UserServiceServer) {
 	s.RegisterService(&_UserService_serviceDesc, srv)
 }
 
-func _UserService_GetCustomerById_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(CustomerByIdRequest)
+func _UserService_GetUserById_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(UserByIdRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(UserServiceServer).GetCustomerById(ctx, in)
+		return srv.(UserServiceServer).GetUserById(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/userservice.UserService/GetCustomerById",
+		FullMethod: "/userservice.UserService/GetUserById",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServiceServer).GetCustomerById(ctx, req.(*CustomerByIdRequest))
+		return srv.(UserServiceServer).GetUserById(ctx, req.(*UserByIdRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _UserService_GetCustomerByUuid_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(CustomerByUuidRequest)
+func _UserService_GetUserByUuid_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(UserByUuidRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(UserServiceServer).GetCustomerByUuid(ctx, in)
+		return srv.(UserServiceServer).GetUserByUuid(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/userservice.UserService/GetCustomerByUuid",
+		FullMethod: "/userservice.UserService/GetUserByUuid",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServiceServer).GetCustomerByUuid(ctx, req.(*CustomerByUuidRequest))
+		return srv.(UserServiceServer).GetUserByUuid(ctx, req.(*UserByUuidRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _UserService_GetCustomerByEmail_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(CustomerByEmailRequest)
+func _UserService_GetUserByEmail_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(UserByEmailRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(UserServiceServer).GetCustomerByEmail(ctx, in)
+		return srv.(UserServiceServer).GetUserByEmail(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/userservice.UserService/GetCustomerByEmail",
+		FullMethod: "/userservice.UserService/GetUserByEmail",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServiceServer).GetCustomerByEmail(ctx, req.(*CustomerByEmailRequest))
+		return srv.(UserServiceServer).GetUserByEmail(ctx, req.(*UserByEmailRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _UserService_GetCustomerByNectar_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(CustomerByNectarRequest)
+func _UserService_GetUserByNectar_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(UserByNectarRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(UserServiceServer).GetCustomerByNectar(ctx, in)
+		return srv.(UserServiceServer).GetUserByNectar(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/userservice.UserService/GetCustomerByNectar",
+		FullMethod: "/userservice.UserService/GetUserByNectar",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServiceServer).GetCustomerByNectar(ctx, req.(*CustomerByNectarRequest))
+		return srv.(UserServiceServer).GetUserByNectar(ctx, req.(*UserByNectarRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -461,20 +461,20 @@ var _UserService_serviceDesc = grpc.ServiceDesc{
 	HandlerType: (*UserServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
-			MethodName: "GetCustomerById",
-			Handler:    _UserService_GetCustomerById_Handler,
+			MethodName: "GetUserById",
+			Handler:    _UserService_GetUserById_Handler,
 		},
 		{
-			MethodName: "GetCustomerByUuid",
-			Handler:    _UserService_GetCustomerByUuid_Handler,
+			MethodName: "GetUserByUuid",
+			Handler:    _UserService_GetUserByUuid_Handler,
 		},
 		{
-			MethodName: "GetCustomerByEmail",
-			Handler:    _UserService_GetCustomerByEmail_Handler,
+			MethodName: "GetUserByEmail",
+			Handler:    _UserService_GetUserByEmail_Handler,
 		},
 		{
-			MethodName: "GetCustomerByNectar",
-			Handler:    _UserService_GetCustomerByNectar_Handler,
+			MethodName: "GetUserByNectar",
+			Handler:    _UserService_GetUserByNectar_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

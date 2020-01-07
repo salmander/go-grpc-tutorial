@@ -19,10 +19,10 @@ type server struct {
 	pb.UnimplementedUserServiceServer
 }
 
-func (s *server) GetCustomerById(ctx context.Context, req *pb.CustomerByIdRequest) (*pb.Customer, error) {
+func (s *server) GetUserById(ctx context.Context, req *pb.UserByIdRequest) (*pb.User, error) {
 	switch req.GetId() {
 	case 9:
-		return &pb.Customer{
+		return &pb.User{
 			Id:                   9,
 			Uuid:                 "batman-911",
 			FirstName:            "Bruce",
@@ -31,19 +31,19 @@ func (s *server) GetCustomerById(ctx context.Context, req *pb.CustomerByIdReques
 			NectarCard:           "911",
 		}, nil
 	default:
-		return &pb.Customer{}, status.Errorf(codes.NotFound, "unknown customer id")
+		return &pb.User{}, status.Errorf(codes.NotFound, "unknown user id")
 	}
 }
 
-func (s *server) GetCustomerByUuid(ctx context.Context, req *pb.CustomerByUuidRequest) (*pb.Customer, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetCustomerByUuid not implemented")
-}
-func (s *server) GetCustomerByEmail(ctx context.Context, req *pb.CustomerByEmailRequest) (*pb.Customer, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetCustomerByEmail not implemented")
-}
-func (s *server) GetCustomerByNectar(ctx context.Context, req *pb.CustomerByNectarRequest) (*pb.Customer, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetCustomerByNectar not implemented")
-}
+//func (s *server) GetUserByUuid(ctx context.Context, req *pb.UserByUuidRequest) (*pb.User, error) {
+//	return nil, nil
+//}
+//func (s *server) GetUserByEmail(ctx context.Context, req *pb.UserByEmailRequest) (*pb.User, error) {
+//	return nil, nil
+//}
+//func (s *server) GetUserByNectar(ctx context.Context, req *pb.UserByNectarRequest) (*pb.User, error) {
+//	return nil, nil
+//}
 
 func main() {
 	listener, err := net.Listen("tcp", port)

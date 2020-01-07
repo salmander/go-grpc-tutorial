@@ -3,29 +3,29 @@ syntax = "proto3";
 package userservice;
 
 service UserService {
-  rpc GetCustomerById (CustomerByIdRequest) returns (Customer) {}
-  rpc GetCustomerByUuid (CustomerByUuidRequest) returns (Customer) {}
-  rpc GetCustomerByEmail (CustomerByEmailRequest) returns (Customer) {}
-  rpc GetCustomerByNectar (CustomerByNectarRequest) returns (Customer) {}
+  rpc GetUserById (UserByIdRequest) returns (User) {}
+  rpc GetUserByUuid (UserByUuidRequest) returns (User) {}
+  rpc GetUserByEmail (UserByEmailRequest) returns (User) {}
+  rpc GetUserByNectar (UserByNectarRequest) returns (User) {}
 }
 
-message CustomerByIdRequest {
+message UserByIdRequest {
   int32 id = 1;
 }
 
-message CustomerByUuidRequest {
+message UserByUuidRequest {
   string uuid = 1;
 }
 
-message CustomerByEmailRequest {
+message UserByEmailRequest {
   string email = 1;
 }
 
-message CustomerByNectarRequest {
+message UserByNectarRequest {
   string nectar_card = 1;
 }
 
-message Customer {
+message User {
   int32 id = 1;
   string uuid = 2;
   string first_name = 3;

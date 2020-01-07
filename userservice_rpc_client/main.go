@@ -35,9 +35,9 @@ func main() {
 	flag.Parse()
 	if idPtr != nil && *idPtr > 0 {
 		log.Printf("Getting customer by SmartShop ID: %v", *idPtr)
-		user, err := c.GetCustomerById(ctx, &pb.CustomerByIdRequest{Id: int32(*idPtr)})
+		user, err := c.GetUserById(ctx, &pb.UserByIdRequest{Id: int32(*idPtr)})
 		if err != nil {
-			log.Printf("error returned from GetCustomerById: %v, Err: %v", *idPtr, err)
+			log.Printf("error returned from GetUserById: %v, Err: %v", *idPtr, err)
 			return
 		}
 		log.Printf("User found by SmartShop ID: %v, %v", *idPtr, *user)
